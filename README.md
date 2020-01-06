@@ -48,7 +48,7 @@ deployment
 | Building button functionality | H        | 8hrs           | hrs           | hrs         |
 | Establish winning conditions  | H        | 3hrs           | hrs           | hrs         |
 | CSS Styling                   | H        | 8hrs           | hrs           | hrs         |
-
+| **Total**                  | N/A        | **40hrs**            | **hrs**           | **hrs**         |
 ## Additional Libraries
 
 Use this section to list all supporting libraries and thier role in the project such as Axios, ReactStrap, D3, etc.
