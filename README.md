@@ -1,6 +1,6 @@
 # Project Overview
 
-![Alt Text](https://media.giphy.com/media/l1IXY77djUsHH6S8o/giphy.gif)
+![Gif or Blackjack](https://media.giphy.com/media/l1IXY77djUsHH6S8o/giphy.gif)
 
 ## Project Description
 
@@ -13,8 +13,13 @@ deployment
 
 ## Wireframes
 
-![Alt Text](https://res.cloudinary.com/ddxlt1pzx/image/upload/v1578343424/BlackJack%20Wireframes/Wireframe_of_Game_fssa4p.png)
-![Alt Text](https://res.cloudinary.com/ddxlt1pzx/image/upload/v1578343424/BlackJack%20Wireframes/React_Components_Heirarchy_tkla6y.png)
+### Wireframe
+
+![Screenshot of game layout](https://res.cloudinary.com/ddxlt1pzx/image/upload/v1578343424/BlackJack%20Wireframes/Wireframe_of_Game_fssa4p.png)
+
+### React Component Breakdown
+
+![Screenshot of React Component hierarchy](https://res.cloudinary.com/ddxlt1pzx/image/upload/v1578343424/BlackJack%20Wireframes/React_Components_Heirarchy_tkla6y.png)
 
 ## MVP/PostMVP
 
