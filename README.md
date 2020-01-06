@@ -1,68 +1,62 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Project Overview
 
-## Available Scripts
+https://media.giphy.com/media/5yYoECDolGySFHKZYl/giphy.gif
+
+## Project Description
 
 In the project directory, you can run:
 
-### `npm start`
+## Project Links
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+github repo
+deployment
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Wireframes
 
-### `npm test`
+https://res.cloudinary.com/ddxlt1pzx/image/upload/v1578343424/BlackJack%20Wireframes/Wireframe_of_Game_fssa4p.png
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+https://res.cloudinary.com/ddxlt1pzx/image/upload/v1578343424/BlackJack%20Wireframes/React_Components_Heirarchy_tkla6y.png
 
-### `npm run build`
+## MVP/PostMVP
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### MVP
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- Utilize an external API To generate cards
+- Render cards to the GameBoard
+- User can choose to 'stand' or 'hit' based on the cards in their hand
+- Computer opponent will have logic to play their turn (based on soft 17)
+- Player will start with value of chips and can play until they are out of money
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### PostMVP
 
-### `npm run eject`
+- Player will be able to 'double-down' and/or 'split'
+- Player will be able to play against other humans as well
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Timeframes
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| Component                     | Priority | Estimated Time | Time Invested | Actual Time |
+| ----------------------------- | -------- | -------------- | ------------- | ----------- |
+| Getting API functioning       | H        | 3hrs           | 1.5hrs        | 1.5hrs      |
+| Building React Router         | H        | 3hrs           | hrs           | hrs         |
+| Creating GameBoard            | H        | 3hrs           | hrs           | hrs         |
+| Adding Cards to the Board     | H        | 3hrs           | hrs           | hrs         |
+| Creating Dealer logic         | H        | 8hrs           | hrs           | hrs         |
+| Building button functionality | H        | 8hrs           | hrs           | hrs         |
+| Establish winning conditions  | H        | 3hrs           | hrs           | hrs         |
+| CSS Styling                   | H        | 8hrs           | hrs           | hrs         |
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Additional Libraries
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Use this section to list all supporting libraries and thier role in the project such as Axios, ReactStrap, D3, etc.
 
-## Learn More
+## Code Snippet
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Use this section to include a brief code snippet of functionality that you are proud of an a brief description. Code snippet should not be greater than 10 lines of code.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Issues and Resolutions
 
-### Code Splitting
+Use this section to list of all major issues encountered and their resolution.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+SAMPLE.....
+ERROR: app.js:34 Uncaught SyntaxError: Unexpected identifier
+RESOLUTION: Missing comma after first object in sources {} object
