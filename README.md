@@ -1,6 +1,6 @@
 # Project Overview
 
-![Alt Text](https://media.giphy.com/media/5yYoECDolGySFHKZYl/giphy.mp4)
+![Alt Text](hhttps://media.giphy.com/media/l1IXY77djUsHH6S8o/giphy.gif)
 
 ## Project Description
 
