@@ -1,6 +1,6 @@
 # Project Overview
 
-![Alt Text](hhttps://media.giphy.com/media/l1IXY77djUsHH6S8o/giphy.gif)
+![Alt Text](https://media.giphy.com/media/l1IXY77djUsHH6S8o/giphy.gif)
 
 ## Project Description
 
@@ -13,9 +13,8 @@ deployment
 
 ## Wireframes
 
-https://res.cloudinary.com/ddxlt1pzx/image/upload/v1578343424/BlackJack%20Wireframes/Wireframe_of_Game_fssa4p.png
-
-https://res.cloudinary.com/ddxlt1pzx/image/upload/v1578343424/BlackJack%20Wireframes/React_Components_Heirarchy_tkla6y.png
+![Alt Text](https://res.cloudinary.com/ddxlt1pzx/image/upload/v1578343424/BlackJack%20Wireframes/Wireframe_of_Game_fssa4p.png)
+![Alt Text](https://res.cloudinary.com/ddxlt1pzx/image/upload/v1578343424/BlackJack%20Wireframes/React_Components_Heirarchy_tkla6y.png)
 
 ## MVP/PostMVP
 
