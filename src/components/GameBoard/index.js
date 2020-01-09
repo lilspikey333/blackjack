@@ -8,7 +8,8 @@ class GameBoard extends Component {
   constructor() {
     super();
     this.state = {
-      newCard: []
+      newCard: null,
+      playerHandArray: []
     };
   }
   // props.cards.forEach(card => {
@@ -30,7 +31,13 @@ class GameBoard extends Component {
     fetch(HitUrl)
       .then(res => res.json())
       .then(res => {
-        this.setState({ newCard: res.cards[0] });
+        this.setState(prevState => {
+          prevState.playerHandArray.push(this.state.newCard);
+          return {
+            playerHandArray: prevState.playerHandArray,
+            newCard: res.cards[0]
+          };
+        });
       });
   };
 
@@ -38,7 +45,6 @@ class GameBoard extends Component {
     this.fetchData();
   };
   render() {
-    console.log(this.state.newCard);
     return (
       <div>
         <h1 className="game-board">GameBoard</h1>
@@ -46,7 +52,12 @@ class GameBoard extends Component {
           <DealerHand cards={this.props.cards} />
         </div>
         <div>
-          <PlayerHand cards={this.props.cards} newCard={this.state.newCard} />
+          <PlayerHand
+            cards={this.props.cards}
+            newCard={this.state.newCard}
+            addNewCard={this.addNewCard}
+            playerHandArray={this.state.playerHandArray}
+          />
         </div>
         <div className="buttons">
           <HitButton
