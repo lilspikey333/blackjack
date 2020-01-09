@@ -1,33 +1,67 @@
-import React from "react";
+import React, { Component } from "react";
 import Card from "../Card";
 import Modal from "../../Modal";
 
-function PlayerHand(props) {
-  let firstCard = props.cards[0];
-  let thirdCard = props.cards[2];
+class PlayerHand extends Component {
+  constructor() {
+    super();
+    this.state = {
+      message: "",
+      display: false,
+      newCard: []
+    };
+  }
+  componentDidMount() {
+    this.gameLogic(this.props);
+  }
 
-  let handTotal = parseInt(firstCard.value, 10) + parseInt(thirdCard.value, 10);
-  console.log(handTotal);
+  displayModal = (message, boo) => {
+    this.setState({ message: message, display: boo });
+  };
+  gameLogic = () => {
+    let total;
+    let totalArray = [];
+    let cardValue;
+    this.props.cards.forEach(element => {
+      element.value = parseInt(element.value);
+      cardValue = element.value;
+      totalArray.push(cardValue);
+    });
+    total = totalArray.reduce((a, b) => a + b, 0);
+    console.log(total);
 
-  function playerLogic(cardOne, cardTwo) {
-    if (cardOne.face === "JACK" && cardTwo.face === "ACE") {
-      let message = "You win - BlackJack";
+    if (
+      (this.props.cards[0].face === "JACK" &&
+        this.props.cards[2].face === "ACE") ||
+      (this.props.cards[0].face === "ACE" &&
+        this.props.cards[2].face === "JACK")
+    ) {
+      this.displayModal("You win - BlackJack", true);
+    }
+
+    // else if (handTotal > 21) {
+    //   this.displayModal("Bust", true);
+    // }
+  };
+  render() {
+    if (this.props.newCard.length !== 0) {
       return (
         <div className="player-hand">
-            <Modal message={message} />
-            <Card card={firstCard} />
-            <Card card={thirdCard} />
+          <Card card={this.props.cards[0]} />
+          <Card card={this.props.cards[2]} />
+          <Card newCard={this.props.newCard} />
+          <Modal message={this.state.message} display={this.state.display} />;
         </div>
       );
-    } 
-
-    playerLogic(firstCard, thirdCard)
-    
-  return (
-    <div className="player-hand">
-      <Card card={firstCard} />
-      <Card card={thirdCard} />
-    </div>
-  );
+    } else {
+      return (
+        <div className="player-hand">
+          <Card card={this.props.cards[0]} />
+          <Card card={this.props.cards[2]} />
+          <Modal message={this.state.message} display={this.state.display} />;
+        </div>
+      );
+    }
+  }
 }
-export default PlayerHand
+export default PlayerHand;
