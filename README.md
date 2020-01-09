@@ -4,7 +4,7 @@
 
 ## Project Description
 
-In the project directory, you can run:
+
 
 ## Project Links
 

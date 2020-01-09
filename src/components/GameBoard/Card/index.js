@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
 function Card(props) {
-    return (
-        <div>
-            <img src={props}/>
-        </div>
-    )
+  return (
+    <div className='card'>
+      <img src={props.card.image} alt={props.card.code} />
+    </div>
+  );
 }
 
-export default Card
+export default Card;
