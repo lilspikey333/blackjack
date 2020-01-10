@@ -5,7 +5,7 @@
   margin: 0;
 }
 
-.card {
+.delt-card {
   display: inline-block;
   margin: 0.6em;
 }
@@ -20,6 +20,9 @@
   display: block;
 }
 .player-hand {
-
   margin-top: 60px;
+}
+
+.game-buttons {
+  margin: 0.6em;
 }

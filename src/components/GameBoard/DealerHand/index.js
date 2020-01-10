@@ -4,9 +4,8 @@ import Card from "../Card";
 function DealerHand(props) {
   return (
     <div className="dealer-hand">
-      <h2>{props.dealerTotal}</h2>
-      {props.dealerHand.map(card => (
-        <Card newCard={card} />
+      {props.dealerHand.map((card, idx) => (
+        <Card newCard={card} key={idx} index={idx} isShowing={props.isShowing}/>
       ))}
     </div>
   );

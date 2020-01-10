@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import DealerHand from "./DealerHand";
 import PlayerHand from "./PlayerHand";
 import HitButton from "./HitButton";
-
 import StandButton from "./StandButton";
-import Modal from "../Modal";
+import InGameModal from "./Modal";
 
 const deckUrl = "https://deckofcardsapi.com/api/deck/new/draw/?count=4";
+
 class GameBoard extends Component {
   constructor() {
     super();
@@ -22,7 +22,8 @@ class GameBoard extends Component {
       dealerTotal: 0,
       dealersTurn: false,
       message: "",
-      display: false
+      display: false,
+      isShowing: false
     };
   }
 
@@ -32,6 +33,20 @@ class GameBoard extends Component {
 
   fetchDeck = () => {
     fetch(deckUrl)
+      .then(res => res.json())
+      .then(res => {
+        this.setState(
+          {
+            deck: res
+          },
+          this.setGameStart
+        );
+      });
+  };
+
+  fetchNextHand = () => {
+    const nextHandUrl = `https://deckofcardsapi.com/api/deck/${this.state.deck.deck_id}/draw/?count=4`;
+    fetch(nextHandUrl)
       .then(res => res.json())
       .then(res => {
         this.setState(
@@ -72,7 +87,6 @@ class GameBoard extends Component {
     this.state.deck.cards.forEach((el, idx) => {
       if (idx % 2 === 0) {
         playerArray.push(el);
-        console.log(playerArray);
       } else if (idx % 2 !== 0) {
         return dealerArray.push(el);
       }
@@ -150,7 +164,8 @@ class GameBoard extends Component {
   handleStandClick = () => {
     this.setState(
       {
-        dealersTurn: true
+        dealersTurn: true,
+        isShowing: true
       },
       this.handleDealerTurn
     );
@@ -238,8 +253,31 @@ class GameBoard extends Component {
     }
   };
 
+  resetGame = () => {
+    this.setState(
+      {
+        newCard: {},
+        playerHand: [],
+        dealerHand: [],
+        cardValue: 0,
+        playerTotalArray: [],
+        playerTotal: 0,
+        dealerTotalArray: [],
+        dealerTotal: 0,
+        dealersTurn: false,
+        message: "",
+        display: false
+      },
+      this.fetchNextHand
+    );
+  };
+
   displayModal = (message, boolean) => {
     this.setState({ message: message, display: boolean });
+  };
+
+  dismissModal = () => {
+    this.resetGame();
   };
 
   render() {
@@ -247,11 +285,17 @@ class GameBoard extends Component {
       <div>
         <h1 className="game-board">GameBoard</h1>
         <div>
-          <Modal message={this.state.message} display={this.state.display} />;
+          <InGameModal
+            onHide={this.dismissModal}
+            message={this.state.message}
+            display={this.state.display}
+          />
+          ;
           <DealerHand
             cards={this.props.cards}
             dealerHand={this.state.dealerHand}
             dealerTotal={this.state.dealerTotal}
+            isShowing={this.state.isShowing}
           />
           <PlayerHand
             cards={this.props.cards}

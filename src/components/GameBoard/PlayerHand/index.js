@@ -4,9 +4,9 @@ import Card from "../Card";
 function PlayerHand(props) {
   return (
     <div className="player-hand">
-      <h2>{props.playerTotal}</h2>
-      {props.playerHand.map(card => (
-        <Card newCard={card} />
+      <h2>Current Total: {props.playerTotal}</h2>
+      {props.playerHand.map((card, idx) => (
+        <Card newCard={card} key={idx} isShowing={true}/>
       ))}
     </div>
   );

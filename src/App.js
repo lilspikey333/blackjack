@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import GameBoard from "./components/GameBoard";
 import "./App.css";
 import { Route } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
   constructor() {

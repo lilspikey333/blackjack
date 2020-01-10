@@ -1,9 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
+import Button from "react-bootstrap/Button";
+
 
 function HitButton(props) {
   return (
     <>
-      <button onClick={props.handleHitClick}>HIT</button>
+        <Button onClick={props.handleHitClick} variant="success" size="lg" className="game-buttons">
+          HIT
+        </Button>
     </>
   );
 }
