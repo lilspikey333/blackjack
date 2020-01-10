@@ -7,7 +7,7 @@
 ## Project Links
 
 - Github Repo: https://github.com/lilspikey333/blackjack
-- Deployed site: https://friendly-heisenberg-c02345.netlify.com
+- Deployed site: https://reactblackjack.netlify.com
 - Video presentation: https://youtu.be/Es5kJumQYdI
 
 ## Wireframes
