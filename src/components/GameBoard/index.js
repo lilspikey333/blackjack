@@ -49,12 +49,16 @@ class GameBoard extends Component {
     fetch(nextHandUrl)
       .then(res => res.json())
       .then(res => {
-        this.setState(
-          {
-            deck: res
-          },
-          this.setGameStart
-        );
+        if (this.state.deck.remaining >= 9) {
+          this.setState(
+            {
+              deck: res
+            },
+            this.setGameStart
+          );
+        } else {
+          this.fetchDeck();
+        }
       });
   };
 
