@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   background-image: url("./photos/TableBackground.jpg");
-  height: 38em;
+  height: 45em;
   margin: 0;
 }
 
@@ -20,6 +20,6 @@
   display: block;
 }
 .player-hand {
-  position: ;
-  bottom: 0;
+
+  margin-top: 60px;
 }
