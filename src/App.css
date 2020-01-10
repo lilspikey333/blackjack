@@ -5,6 +5,10 @@
   margin: 0;
 }
 
+#opening-header {
+  text-align: center;
+}
+
 .delt-card {
   display: inline-block;
   margin: 0.6em;

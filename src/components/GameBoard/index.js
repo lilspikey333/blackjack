@@ -123,10 +123,10 @@ class GameBoard extends Component {
     });
     if (
       (tempTotal === 21 &&
-        this.state.playerHand[0].face &&
+        this.state.playerHand[0].value === 10 &&
         this.state.playerHand[1].face === "ACE") ||
       (tempTotal === 21 &&
-        this.state.playerHand[1].face &&
+        this.state.playerHand[1].value === 10 &&
         this.state.playerHand[0].face === "ACE")
     ) {
       this.displayModal("Blackjack! You win!", true);
@@ -184,10 +184,10 @@ class GameBoard extends Component {
     tempTotal = tempArray.reduce((a, b) => a + b, 0);
     if (
       (tempTotal === 21 &&
-        this.state.dealerHand[0].face &&
+        this.state.dealerHand[0].value === 10 &&
         this.state.dealerHand[1].face === "ACE") ||
       (tempTotal === 21 &&
-        this.state.dealerHand[1].face &&
+        this.state.dealerHand[1].value === 10 &&
         this.state.dealerHand[0].face === "ACE")
     ) {
       this.displayModal("Dealer wins - Blackjack", true);
@@ -266,7 +266,8 @@ class GameBoard extends Component {
         dealerTotal: 0,
         dealersTurn: false,
         message: "",
-        display: false
+        display: false,
+        isShowing: false
       },
       this.fetchNextHand
     );
