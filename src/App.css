@@ -1,8 +1,13 @@
 .App {
   text-align: center;
   background-image: url("./photos/TableBackground.jpg");
-  height: 45em;
+  background-repeat: no-repeat;
+  height: 100em;
   margin: 0;
+}
+
+.total {
+  color: whitesmoke;
 }
 
 #opening-header {
@@ -11,7 +16,19 @@
 
 .delt-card {
   display: inline-block;
-  margin: 0.6em;
+  margin: 0.2em;
+  height: 30%;
+  width: 30%;
+}
+
+img {
+  display: inline;
+  height: 55%;
+  width: 55%;
+}
+
+li {
+  margin-top: 10px;
 }
 
 .game-board {
@@ -29,4 +46,6 @@
 
 .game-buttons {
   margin: 0.6em;
+  display: absolute;
+  bottom: 0;
 }

@@ -211,7 +211,8 @@ class GameBoard extends Component {
           prevState.dealerHand.push(res.cards[0]);
           return {
             dealerHand: prevState.dealerHand,
-            newCard: res.cards[0]
+            newCard: res.cards[0],
+            isShowing: true
           };
         }, this.calcDealerTotal);
       });
@@ -284,7 +285,6 @@ class GameBoard extends Component {
   render() {
     return (
       <div>
-        <h1 className="game-board">GameBoard</h1>
         <div>
           <InGameModal
             onHide={this.dismissModal}

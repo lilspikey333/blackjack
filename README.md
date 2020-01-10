@@ -6,7 +6,7 @@
 
 ## Project Links
 
-github repo
+- Github Repo: https://github.com/lilspikey333/blackjack
 deployment
 
 ## Wireframes
@@ -39,14 +39,14 @@ deployment
 | Component                     | Priority | Estimated Time | Time Invested | Actual Time |
 | ----------------------------- | -------- | -------------- | ------------- | ----------- |
 | Getting API functioning       | H        | 3hrs           | 1.5hrs        | 1.5hrs      |
-| Building React Router         | H        | 3hrs           | 1hrs          | hrs         |
-| Creating GameBoard            | H        | 3hrs           | 8hrs          | hrs         |
-| Adding Cards to the Board     | H        | 3hrs           | 3hrs          | hrs         |
-| Creating Dealer logic         | H        | 8hrs           | 3hrs          | hrs         |
-| Building button functionality | H        | 8hrs           | 5hrs          | hrs         |
-| Establish winning conditions  | H        | 3hrs           | 2hrs          | hrs         |
-| CSS Styling                   | H        | 8hrs           | 6hrs          | hrs         |
-| **Total**                     | N/A      | **40hrs**      | **29.5hrs**   | **hrs**     |
+| Building React Router         | H        | 3hrs           | 1hrs          | 1hrs         |
+| Creating GameBoard            | H        | 3hrs           | 8hrs          | 8hrs         |
+| Adding Cards to the Board     | H        | 3hrs           | 3hrs          | 3hrs         |
+| Creating Dealer logic         | H        | 8hrs           | 3hrs          | 3hrs         |
+| Building button functionality | H        | 8hrs           | 5hrs          | 5hrs         |
+| Establish winning conditions  | H        | 3hrs           | 2hrs          | 2hrs         |
+| CSS Styling                   | H        | 8hrs           | 6hrs          | 6hrs         |
+| **Total**                     | N/A      | **40hrs**      | **29.5hrs**   | **29.5hrs**     |
 
 ## Additional Libraries
 
