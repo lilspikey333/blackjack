@@ -207,7 +207,6 @@ class GameBoard extends Component {
       .then(res => res.json())
       .then(res => {
         this.setState(prevState => {
-          console.log(res.cards[0]);
           prevState.dealerHand.push(res.cards[0]);
           return {
             dealerHand: prevState.dealerHand,
