@@ -1,16 +1,11 @@
 import React from "react";
 import Modal from "react-bootstrap/Modal";
-import Button from 'react-bootstrap/Button'
+import Button from "react-bootstrap/Button";
 
 function InGameModal(props) {
-  if (props.display) {
+  if (props.display === "true") {
     return (
-      <Modal
-        {...props}
-        size="lg"
-        centered
-        show='true'
-      >
+      <Modal {...props} size="lg" centered show={true}>
         <Modal.Body>
           <h4>{props.message}</h4>
         </Modal.Body>

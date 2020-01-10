@@ -14,17 +14,17 @@
   text-align: center;
 }
 
+.hands {
+  min-height: calc(80vh - 70px);
+}
+
 .delt-card {
   display: inline-block;
   margin: 0.2em;
-  height: 30%;
-  width: 30%;
 }
 
 img {
   display: inline;
-  height: 55%;
-  width: 55%;
 }
 
 li {
@@ -41,11 +41,10 @@ li {
   display: block;
 }
 .player-hand {
-  margin-top: 60px;
+  margin-top: 130px;
 }
 
 .game-buttons {
   margin: 0.6em;
-  display: absolute;
-  bottom: 0;
+  height: 50px
 }

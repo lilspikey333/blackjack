@@ -134,8 +134,14 @@ class GameBoard extends Component {
 
     if (tempTotal > 21 && tempArray.includes(11) === true) {
       let idx = tempArray.indexOf(11);
-      this.state.playerHand[idx].value = 1;
-      this.state.playerTotalArray[idx] = 1;
+      let copyPlayerHand = [...this.state.playerHand];
+      let copyPlayerTotalArray = [...this.state.playerTotalArray];
+      copyPlayerHand[idx].value = 1;
+      copyPlayerTotalArray[idx] = 1;
+      this.setState({
+        playerHand: copyPlayerHand,
+        playerTotalArray: copyPlayerTotalArray
+      });
       this.calcPlayerTotal();
     } else if (tempTotal > 21) {
       this.displayModal("Bust", true);
@@ -233,8 +239,14 @@ class GameBoard extends Component {
       this.state.dealerTotalArray.includes(11) === true
     ) {
       let idx = this.state.dealerTotalArray.indexOf(11);
-      this.state.dealerHand[idx].value = 1;
-      this.state.dealerTotalArray[idx] = 1;
+      let copyDealerHand = [...this.state.dealerHand];
+      let copyDealerTotalArray = [...this.state.dealerTotalArray];
+      copyDealerHand[idx].value = 1;
+      copyDealerTotalArray[idx] = 1;
+      this.setState({
+        dealerHand: copyDealerHand,
+        dealerTotalArray: copyDealerTotalArray
+      });
       this.calcDealerTotal();
     } else if (this.state.dealerTotal > 21) {
       this.displayModal("You win - Dealer busts", true);
@@ -288,20 +300,21 @@ class GameBoard extends Component {
           <InGameModal
             onHide={this.dismissModal}
             message={this.state.message}
-            display={this.state.display}
+            display={String(this.state.display)}
           />
-          ;
-          <DealerHand
-            cards={this.props.cards}
-            dealerHand={this.state.dealerHand}
-            dealerTotal={this.state.dealerTotal}
-            isShowing={this.state.isShowing}
-          />
-          <PlayerHand
-            cards={this.props.cards}
-            playerHand={this.state.playerHand}
-            playerTotal={this.state.playerTotal}
-          />
+          <div className="hands">
+            <DealerHand
+              cards={this.props.cards}
+              dealerHand={this.state.dealerHand}
+              dealerTotal={this.state.dealerTotal}
+              isShowing={this.state.isShowing}
+            />
+            <PlayerHand
+              cards={this.props.cards}
+              playerHand={this.state.playerHand}
+              playerTotal={this.state.playerTotal}
+            />
+          </div>
         </div>
         <div className="buttons">
           <HitButton handleHitClick={this.handleHitClick} />
